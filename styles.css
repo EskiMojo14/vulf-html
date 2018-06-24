@@ -7,8 +7,8 @@
   --accent-colour: #fff9a2;
   --font: Vulf Mono;
   --font2: Roboto Mono;
-  --large-font: 56px;
-  --small-font: 24px; }
+  --large-font: 80px;
+  --small-font: 28px; }
 
 div, canvas {
   box-sizing: border-box; }
@@ -19,7 +19,7 @@ canvas {
 body {
   background-color: var(--background-colour, #9cbfdc);
   font-family: var(--font, Vulf Mono);
-  font-size: var(--small-font, 24px);
+  font-size: var(--small-font, 28px);
   color: var(--foreground-colour, white); }
 
 .accent {
@@ -56,11 +56,11 @@ body {
       flex-direction: column;
       align-items: flex-end; }
       .layout .mid .clock .time {
-        font-size: var(--large-font, 56px);
+        font-size: var(--large-font, 80px);
         flex-grow: 0;
         font-weight: 200; }
       .layout .mid .clock .secondary-time {
-        font-size: calc(var(--small-font, 24px)*0.75);
+        font-size: calc(var(--small-font, 28px)*0.75);
         font-style: italic;
         text-transform: lowercase; }
       .layout .mid .clock .date {
