@@ -1,0 +1,132 @@
+@import "scss/variables";
+
+div, canvas {
+    box-sizing: border-box;
+}
+
+canvas {
+    background-color: rgba(0,0,0,0.25);
+}
+
+body {
+    background-color: variable("background-colour");
+    font-family: variable("font");
+    font-size: variable("small-font");
+    color: variable("foreground-colour");
+}
+.accent {
+    color: variable("accent-colour");
+}
+.blink {
+    animation: blink 2s steps(2, start) infinite;
+}
+@keyframes blink {
+    to {
+        visibility: hidden;
+    }
+}
+.layout {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: var(--padding);
+    .top {
+        flex: 1 1 0;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        .logo {
+            height: variable("logo-height");
+            path {
+                fill: variable("foreground-colour");
+            }
+        }
+    }
+    .mid {
+        display: flex;
+        align-items: center;
+        .clock {
+            flex: 1 1 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            .time {
+                font-size: variable("large-font");
+                flex-grow: 0;
+                font-weight: 200;
+            }
+            .secondary-time {
+                font-size: calc(#{variable("small-font")}*0.75);
+                font-style: italic;
+                text-transform: lowercase;
+            }
+            .date {
+                text-transform: uppercase;
+                font-family: variable("font2");
+                text-align: end;
+            }
+        }
+        .cover {
+            padding: variable("padding");
+            flex-grow: 0;
+            flex-shrink: 0;
+            .cover-canvas {
+                height: variable("cover-size");
+                width: variable("cover-size");
+            }
+        }
+        .info {
+            flex: 1 1 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            .artist {
+                text-transform: lowercase;
+                font-style: italic;
+            }
+            .track {
+                color: variable("accent-colour");
+                text-transform: uppercase;
+            }
+            .album {
+                text-transform: uppercase;
+                font-weight: 200;
+            }
+        }
+    }
+    .bottom {
+        flex: 1 1 0;
+        display: flex;
+        flex-direction: column;
+        .position {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+        .controls {
+            flex: 1 1 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .control {
+                -webkit-appearance: none;
+                background: none;
+                border: none;
+                color: inherit;
+                padding: calc(#{variable("padding")}*0.5);
+                opacity: 0.5;
+                cursor: pointer;
+                &:hover, &:focus {
+                    outline: none;
+                    opacity: 1;
+                    color: variable("accent-colour");
+                    font-weight: 600;
+                    transition: color 0.25s, opacity 0.25s;
+                }
+            }
+        }
+    }
+}
+
+@import "node_modules/normalize.css/normalize";

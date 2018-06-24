@@ -1,0 +1,29 @@
+$vulf-colours: #9bbede, #9cbfdc, #d98f84, #caddec, #f0d3ce, #e0e5e7, #d85961;
+
+$variables: (
+    cover-size: 384px,
+
+    logo-height: 72px,
+
+    padding: 56px,
+
+    background-colour: nth($vulf-colours, 2),
+    foreground-colour: white,
+    accent-colour: #fff9a2,
+
+    font: "Vulf Mono",
+    font2: "Roboto Mono",
+
+    large-font: 56px,
+    small-font: 24px
+);
+
+@function variable($variable) {
+    @return var(--#{$variable},#{map-get($variables, $variable)})
+}
+
+:root {
+    @each $variable in map-keys($variables) {
+        --#{$variable}: #{map-get($variables, $variable)};
+    }
+}
