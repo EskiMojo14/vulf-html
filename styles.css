@@ -20,7 +20,8 @@ body {
   background-color: var(--background-colour, #9cbfdc);
   font-family: var(--font, Vulf Mono);
   font-size: var(--small-font, 28px);
-  color: var(--foreground-colour, white); }
+  color: var(--foreground-colour, white);
+  user-select: none; }
 
 .accent {
   color: var(--accent-colour, #fff9a2); }
