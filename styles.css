@@ -88,6 +88,20 @@ body {
       .layout .mid .info .album {
         text-transform: uppercase;
         font-weight: 200; }
+      .layout .mid .info.alt {
+        position: fixed;
+        top: var(--padding, 56px);
+        left: var(--padding, 56px); }
+        .layout .mid .info.alt .artist, .layout .mid .info.alt .track, .layout .mid .info.alt .album {
+          font-family: var(--font2, Roboto Mono);
+          text-transform: uppercase;
+          font-style: normal;
+          color: var(--accent-colour, #fff9a2);
+          font-weight: 400; }
+        .layout .mid .info.alt .track {
+          color: var(--foreground-colour, white); }
+        .layout .mid .info.alt ~ .info-padder {
+          flex: 1 1 0; }
   .layout .bottom {
     flex: 1 1 0;
     display: flex;

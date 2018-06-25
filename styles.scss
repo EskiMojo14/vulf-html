@@ -91,6 +91,24 @@ body {
                 text-transform: uppercase;
                 font-weight: 200;
             }
+            &.alt {
+                position: fixed;
+                top: variable("padding");
+                left: variable("padding");
+                .artist, .track, .album {
+                    font-family: variable("font2");
+                    text-transform: uppercase;
+                    font-style: normal;
+                    color: variable("accent-colour");
+                    font-weight: 400;
+                }
+                .track {
+                    color: variable("foreground-colour");
+                }
+                & ~ .info-padder {
+                    flex: 1 1 0;
+                }
+            }
         }
     }
     .bottom {
