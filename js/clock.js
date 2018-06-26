@@ -27,7 +27,7 @@ function startTime() {
     document.getElementById('time').innerHTML = timeFormat;
     document.getElementById('time2').innerHTML = timeFormat2;
     document.getElementById('date').innerHTML = dateFormat;
-    var t = setTimeout(startTime, 500);
+    var t = setTimeout(startTime, 10000);
 }
 
 function timeZone(i) {
