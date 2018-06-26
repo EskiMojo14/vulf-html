@@ -24,7 +24,7 @@
                     <span class="accent">Sunday</span>, 24 June 2018
                 </div>
             </div>
-            <div class="cover">
+            <div id="cover-container" class="cover">
                 <canvas id="cover-canvas" class="cover-canvas"></canvas>
             </div>
             <div class="info">
@@ -49,9 +49,6 @@
             </div>
         </div>
     </div>
+    <script src="js/cover.js"></script>
 </body>
-<script>
-    var info = document.querySelector('.info'); 
-    info.addEventListener('dblclick', function() {info.classList.toggle('alt')});
-</script>
 </html>

@@ -3,9 +3,6 @@
 div, canvas {
     box-sizing: border-box;
 }
-canvas {
-    background-color: rgba(0,0,0,0.25);
-}
 body {
     background-color: variable("background-colour");
     font-family: variable("font");
@@ -67,13 +64,11 @@ body {
             }
         }
         .cover {
-            padding: variable("padding");
+            margin: variable("padding");
             flex-grow: 0;
             flex-shrink: 0;
-            .cover-canvas {
-                height: variable("cover-size");
-                width: variable("cover-size");
-            }
+            height: variable("cover-size");
+            width: variable("cover-size");
         }
         .info {
             flex: 1 1 0;

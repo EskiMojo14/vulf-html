@@ -13,9 +13,6 @@
 div, canvas {
   box-sizing: border-box; }
 
-canvas {
-  background-color: rgba(0, 0, 0, 0.25); }
-
 body {
   background-color: var(--background-colour, #9cbfdc);
   font-family: var(--font, Vulf Mono);
@@ -69,12 +66,11 @@ body {
         font-family: var(--font2, Roboto Mono);
         text-align: end; }
     .layout .mid .cover {
-      padding: var(--padding, 56px);
+      margin: var(--padding, 56px);
       flex-grow: 0;
-      flex-shrink: 0; }
-      .layout .mid .cover .cover-canvas {
-        height: var(--cover-size, 384px);
-        width: var(--cover-size, 384px); }
+      flex-shrink: 0;
+      height: var(--cover-size, 384px);
+      width: var(--cover-size, 384px); }
     .layout .mid .info {
       flex: 1 1 0;
       display: flex;
