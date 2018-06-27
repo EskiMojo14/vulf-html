@@ -79,5 +79,3 @@ function drawCover(src) {
 
     img.src = src;
 }
-
-drawCover('https://is2-ssl.mzstatic.com/image/thumb/Music118/v4/d4/e9/ef/d4e9ef81-454d-17df-5f56-f7d79064a931/859723089874_cover.jpg/600x600bf.jpg');

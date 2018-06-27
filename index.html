@@ -20,36 +20,40 @@
                 <div class="secondary-time">
                     <span class="accent" id="time2">08<span class="blink">:</span>13</span> - Classy
                 </div>
-                <div id="date" class="date">
+                <div class="date" id="date">
                     <span class="accent">Sunday</span>, 24 June 2018
                 </div>
             </div>
-            <div id="cover-container" class="cover">
-                <canvas id="cover-canvas" class="cover-canvas"></canvas>
+            <div class="cover" id="cover-container">
+                <canvas class="cover-canvas" id="cover-canvas"></canvas>
             </div>
             <div class="info">
-                <div class="artist">Vulfpeck</div>
-                <div class="track">Hero Town (feat. Michael Bland)</div>
-                <div class="album">Mr Finish Line</div>
+                <div class="artist" id="artist">n/a</div>
+                <div class="track" id="track">n/a</div>
+                <div class="album" id="album">n/a</div>
             </div>
             <div class="info-padder"></div>
         </div>
         <div class="bottom">
             <div class="position">
                 <div>
-                    <span id="position">0:00</span>
+                    <span id="position">n/a</span>
                     <span> - </span>
-                    <span class="accent" id="duration">3:00</span>
+                    <span class="accent" id="duration">n/a</span>
                 </div>
             </div>
             <div class="controls">
-                <button class="control" id="prev">prev</button>
-                <button class="control" id="play">play</button>
-                <button class="control" id="next">next</button>
+                <button class="control" id="prev" onclick="MediaControls('Previous')">prev</button>
+                <button class="control" id="playpause" onclick="MediaControls('PlayPause')">play</button>
+                <button class="control" id="next" onclick="MediaControls('Next')">next</button>
             </div>
         </div>
     </div>
     <script src="js/cover.js"></script>
     <script src="js/clock.js"></script>
+    <script src="js/websockets/MediaControls.js"></script>
+    <script src="js/websockets/ProgressGroup.js"></script>
+    <script src="js/websockets/SongGroup.js"></script>
+    <script src="js/websockets/Status.js"></script>
 </body>
 </html>
