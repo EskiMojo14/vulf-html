@@ -3,7 +3,7 @@ var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'S
 var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
 //offset from local time in hours
-var timezoneOffset = -8;
+var timezoneOffset = -5;
 
 //for the Philistines
 var use12Hr = false;
